@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Güneş Enerjisi Projesi</title> <link rel="icon" type="image/x-icon" href="firat.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 18px; /* Yazı tipi boyutunu ayarlayabilirsiniz, örneğin 18px */
+            line-height: 1.6; /* Satır yüksekliği, yazılar arası boşluk için */
+            padding: 0;
+            margin: 0;
+            background: #ffffff; /* Tam beyaz arka plan */
+        }
+        .sidebar {
+            height: 100%;
+            width: 250px; /* Sidebar genişliği */
+            position: fixed;
+            z-index: 2;
+            top: 0;
+            left: -250px; /* Sidebar başlangıçta gizli */
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .sidebar a {
+            padding: 10px 16px; /* Her yöne eşit padding */
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+            width: 100%; /* Elemanların tüm genişliği kaplaması için */
+            box-sizing: border-box; /* Padding dahil genişlik hesaplaması */
+            text-align: center; /* Metinlerin ortalanması */
+        }
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+            color: #818181;
+            cursor: pointer;
+        }
+        .sidebar .closebtn:hover {
+            color: #f1f1f1;
+        }
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #111;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            position: fixed; /* Sabit pozisyon */
+            top: 0;
+            left: 0;
+            z-index: 1;
+            opacity: 0.5; /* Buton şeffaf */
+            border-radius: 50%; /* Butonu tam yuvarlak yapar */
+            padding: 10px 15px; /* Butonun iç boşluğu */
+            margin-left: 10px; /* Soldan boşluk ekler */
+            margin-top: 10px; /* yukardan boşluk ekler */
+        }
+        .openbtn:hover {
+            opacity: 1; /* Butonun üzerine gelindiğinde şeffaflığı kaldır */
+        }
+        .main-content {
+            transition: margin-left .5s; /* Geçiş animasyonu */
+            padding: 16px; /* Üst, alt, sağ ve sol için 16px boşluk */
+            margin-left: 150px; /* Sidebar genişliği kadar marjin */
+            margin-right: 150px; /* Sağ tarafta sabit boşluk */
+        }
+        .research-link {
+            text-decoration: none; /* Altı çizili olmaması için */
+            color: inherit; /* Çevresindeki metinle aynı renk */
+            transition: color 0.3s; /* Renk değişim geçişi yumuşatma */
+            color: #778899;
+        }
+        .research-link:hover {
+            color: #0056b3; /* Üzerine gelince mavi olacak */
+        }
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        td, th {
+            border: 1px solid;
+            text-align: left;
+            padding: 8px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()" style="text-align: right">×</a>
+    <a href="#section0">Güneş Enerjisi Projesi</a>
+    <a href="#section1">Güneş Enerjisi</a>
+    <a href="#section2">Fotovoltaik Güneş Enerjisi</a>
+    <a href="#section3">Zaman Serileri</a>
+    <a href="#section4">Tahminin Önemi</a>
+    <a href="#section5">İklim Değişikliği</a>
+</div>
+
+<div id="mainContent" class="main-content">
+    <button class="openbtn" onclick="toggleSidebar()">☀</button>
+    <br>
+    <div  class="section" id="section0">
+        <h2>Güneş Enerjisi Projesi</h2>
+        <p> Bu rapor, Ağ Programlama dersi kapsamında vize sınavı için hazırlanan proje sunumuna katkı sağlaması için oluşturulmuştur.
+            Güneş enerjisi hakkında detaylı bilgi sağlamak amacıyla hazırlanmıştır.
+        </p>
+    </div>
+
+    <div class="section" id="section1">
+        <h2>Güneş Enerjisi</h2>
+        <hr>
+        <h4>Hakkında</h4>
+        <p>Güneş enerjisi, dünya iklimi ve atmosfer üzerinde önemli bir etkiye sahiptir. İklim değişikliklerinin uzun vadeli etkileri
+            nedeniyle bu alan giderek daha fazla önem kazanmaktadır. Bu bağlamda, yer yüzeyine ulaşan güneş ışınlarının enerjiye
+            dönüştürülmesi öncelikli bir konu haline gelmiştir.</p>
+        <p>Güneş enerjisi santrallerinin başarılı ve verimli işletilmesi için, Direct Normal Irradiance (DNI) gibi güneş enerjisi
+            verilerinin doğru tahmin edilmesi hayati önem taşır. Bu tür veriler, güneş enerjisi üretiminin optimize edilmesine ve
+            dolayısıyla enerji santrallerinin maksimum kapasitede çalışmasına olanak tanır. Özellikle, DNI tahminleri, güneş panellerinin
+            doğru konumlandırılmasında ve enerji üretiminin etkin yönetiminde kritik bir role sahiptir. Bu bağlamda, güneş enerjisi verilerinin
+            doğru ve güvenilir bir şekilde tahmin edilmesi, yenilenebilir enerji santrallerinin ekonomik ve çevresel açıdan sürdürülebilirliğini
+            artırır. Bu nedenle, güneş enerjisi tahmin modellerinin geliştirilmesi ve uygulanması, bu alandaki teknolojik ilerlemeler için önemli
+            bir yatırım alanıdır.
+        </p>
+        <h4>Güneş Işınımı</h4>
+        <p>Güneş ışınımı, Güneş'ten gelen enerjinin Dünya'nın atmosferinden geçtikten sonra yüzeyine ulaşan miktarını ifade eder. Bu enerji, güneş enerjisi
+            santrallerinde elektrik üretimi için temel kaynak olarak kullanılır. Güneş ışınımının doğru bir şekilde ölçülmesi ve tahmin edilmesi,
+            güneş panellerinin etkinliğini artırmak ve enerji üretim süreçlerini optimize etmek için kritik öneme sahiptir.
+        </p>
+        <p>Bu alanda, NASA'nın POWER (Prediction of Worldwide Energy Resource) ve NREL'in (National Renewable Energy Laboratory) sunmuş olduğu API'lar
+            gibi sistemler, güneş ışınımı ve diğer meteorolojik verileri sağlamakta önemli rol oynar. Bu sistemler, uydu verilerini, yer gözlem istasyonlarının
+            verilerini ve atmosferik modellemeleri kullanarak güneş ışınımı dahil bir dizi iklim verisini tahmin eder ve sunar.
+        </p>
+        <p> <a class="research-link" href="https://power.larc.nasa.gov/" target="_blank">NASA POWER API</a>, dünya çapında güneş enerjisi ve iklim verileri
+            sağlamak üzere tasarlanmıştır. Bu platform, çeşitli uygulamalar için geniş bir coğrafi kapsama alanı sunarak, kullanıcıların belirli bir konum
+            için günlük veya yıllık ortalama güneş ışınımı gibi verilere erişimini kolaylaştırır.
+        </p>
+        <h4>Güneş Sabiti</h4>
+        <p>Güneş sabiti, Dünya'nın atmosferine ulaşan güneş enerjisinin birim alana düşen miktarını ifade eder ve yaklaşık olarak 1361 watt/m²'dir.
+            Bu değer, Dünya'nın Güneş'e en yakın mesafede olduğu zaman ölçülen toplam güneş ışınımıdır. Güneş sabiti, Dünya'nın eliptik yörüngesi
+            nedeniyle yıl içinde %0.1 kadar değişiklik gösterir. Bu değişiklikler, iklim üzerinde etkili olabilir. NASA'nın sağladığı yüksek hassasiyetli
+            uydu ölçümleri, bu değişimleri anlamamıza yardımcı olur ve iklim modellemelerinde kullanılır.
+        </p>
+        <h4>Zenith Açısı</h4>
+        <p>Zenith açısı, güneşin veya başka bir göksel cismin, gözlemcinin bulunduğu noktanın tam üzerindeki düşey çizgiyle arasındaki açıdır. Bu açı,
+            0 derece olduğunda göksel cisim tam baş üstünde, yani zenitte bulunur. Açı, 90 dereceye ulaştığında ufukta, yani gözlemcinin yatay düzleminde
+            yer alır. Zenith açısı, güneş enerjisi uygulamalarında, özellikle güneş panellerinin yerleşimini optimize etmek için çok önemlidir çünkü panelin
+            aldığı güneş ışığının miktarını ve dolayısıyla üreteceği enerji miktarını doğrudan etkiler. Bu açının hesaplanması, güneşin konumuna bağlı olarak
+            gün içinde değişir ve bu değişim, panelin güneşe olan açısal konumunun ayarlanması gerektiğinde kritik bir veri sağlar.
+        </p>
+        <p>Zenith açısı, gözlemcinin yerel yatay düzlemi ile göksel cisim arasındaki açıyı hesaplamak için kullanılır. Formülü şu şekildedir:</p>
+        <div style="text-align: center;">
+            <p><strong>&theta;<sub>z</sub> = 90&deg; - &alpha;</strong></p>
+        </div>
+        <p>Burada &alpha; güneşin yükseklik açısıdır ve bu, gözlemcinin yatay düzleminden göksel cismin gözlemlenen açısal yüksekliğini ifade eder.
+            Zenith açısı hesaplama, özellikle güneş enerjisi uygulamalarında önem taşır çünkü güneş panellerinin yerel yatay düzleme göre en verimli
+            konumunu belirlemeye yardımcı olur.</p>
+        <div style="text-align: center;">
+            <img src="zenith_açı.png" alt="Zenith Angle Diagram" style="width: 40%;">
+        </div>
+        <h4>DNI</h4>
+        <p>Direct Normal Irradiance (DNI), güneşin doğrudan yansımasını ifade eder ve yatay olmayan düzlemlerde güneş ışığının yoğunluğunu ölçer.
+            Atmosferden geçen güneş ışınlarının yüzeye düşmeden önceki saflığını ve yoğunluğunu gösterir, bu yüzden güneş enerjisi sistemlerinin verimliliği
+            için önemli bir parametredir.</p>
+
+        <p>DNI değerleri, güneş radyasyonunu ölçen pirometre gibi cihazlarla ölçülür. Bu cihazlar, direkt olarak güneş ışığını algılayacak şekilde özel olarak
+            tasarlanmıştır ve genellikle güneşin konumunu takip edebilen sistemlerle donatılmıştır.</p>
+
+        <p>Güneş enerjisi panellerinin enerji üretim hesabında DNI büyük bir rol oynar. Enerji çıktısı genellikle aşağıdaki formülle hesaplanır:</p>
+        <div style="text-align: center;">
+            <pre>
+        P = A &times; r &times; G &times; PR
+       </pre>
+        </div>
+        <ul>
+            <li><strong>P</strong>: Üretilen güç (watt cinsinden)</li>
+            <li><strong>A</strong>: Panelin alanı (metrekare cinsinden)</li>
+            <li><strong>r</strong>: Panelin verimliliği</li>
+            <li><strong>G</strong>: Güneş ışınımı (DNI dahil)</li>
+            <li><strong>PR</strong>: Performans oranı (sistem verimliliği)</li>
+        </ul>
+
+        <p>Bu formül, güneş panelleri tarafından absorbe edilen toplam enerjinin, panelin fiziksel özellikleri ve yerel güneş ışınımı göz önüne alındığında
+            ne kadarının elektrik enerjisine dönüştürülebileceğini hesaplar. DNI'nin doğru bir şekilde ölçülmesi, formüldeki <strong>G</strong> değerinin
+            doğruluğu için kritiktir, çünkü güneş panelinin maruz kaldığı güneş ışığının yoğunluğunu temsil eder.</p>
+
+        <p>Bu bilgiler, güneş enerjisi projelerinin planlanması ve yönetilmesi için hayati önem taşır, çünkü yatırım getirisini ve sistemin genel etkinliğini
+            doğrudan etkiler.</p>
+        <div style="text-align: center;">
+            <img src="dnıpic.jpg" alt="Zenith Angle Diagram" style="width: 40%;">
+        </div>
+    </div>
+
+    <div class="section" id="section2">
+        <h2>Fotovoltaik Güneş Enerjisi</h2>
+        <hr>
+        <h4>Hakkında</h4>
+        <p>Fotovoltaik güneş enerjisi, güneş ışığını elektrik enerjisine çeviren yarı iletken malzemeler kullanarak çalışır. Bu sistemler, genellikle
+            çatılara veya büyük arazilere kurulan paneller şeklinde düzenlenir ve güneşten gelen ışığı direkt akım halinde elektriğe dönüştürür.
+            Bu enerji daha sonra invertörler aracılığıyla alternatif akıma çevrilir ve günlük kullanım için uygundur. Fotovoltaik teknoloji, hem çevresel
+            açıdan sürdürülebilir hem de giderek daha uygun maliyetli bir yenilenebilir enerji çözümü sunar. Bu özellikleri, onu dünya genelinde popüler
+            bir enerji kaynağı haline getirmiştir.
+        </p>
+        <p>Güneş enerjisi panelleri, güneş ışığını doğrudan elektrik enerjisine dönüştüren fotovoltaik (PV) sistemlerdir. Bu panellerin enerji üretim
+            kapasitesini doğru bir şekilde tahmin etmek, güneş enerjisi projelerinin planlanması ve optimize edilmesi açısından kritik öneme sahiptir.
+            Enerji üretim hesabı yapılırken dikkate alınan birkaç önemli faktör vardır, ancak Direct Normal Irradiance (DNI) yani Doğrudan Normal Işınım
+            verisi en önemli faktörlerden biridir.</p>
+
+        <p>DNI, güneşten doğrudan gelen ve bir yüzeye dik açıyla düşen güneş ışınımının ölçüsüdür. Bu veri, özellikle konsantre güneş enerjisi sistemleri
+            (CSP) ve güneş takip sistemi olan PV panelleri için çok önemlidir. DNI verisi, doğrudan güneş ışığının yoğunluğunu ifade eder ve bu yoğunluk,
+            güneş panellerinin enerji üretim kapasitesini belirler. Yüksek DNI değerleri, daha fazla enerji üretimi anlamına gelir.</p>
+
+        <p>Güneş enerjisi sistemlerinin enerji üretim hesaplamasında, aşağıdaki adımlar genellikle takip edilir:</p>
+
+        <ol>
+            <li><strong>DNI Verilerinin Toplanması:</strong> Güneş enerjisi sisteminin kurulacağı bölgedeki DNI verileri, yerel hava durumu istasyonlarından, uydu
+                verilerinden veya modellemelerden elde edilir. Bu veriler, genellikle saatlik veya günlük olarak kaydedilir ve uzun dönem ortalamaları alınarak analiz
+                edilir.</li>
+            <li><strong>Panel Açısı ve Yönelimi:</strong> Güneş panellerinin en verimli çalışması için optimal açı ve yön belirlenir. Panel açısı ve yönelimi,
+                güneşin hareketine göre ayarlanarak maksimum ışınımın alınması sağlanır.</li>
+            <li><strong>Yerel Hava Koşulları:</strong> Bulutluluk, nem ve toz gibi atmosferik koşullar, güneş ışığının yere ulaşmasını etkiler. Bu faktörler de enerji
+                üretim hesabında dikkate alınır.</li>
+            <li><strong>Panel Verimliliği:</strong> Güneş panellerinin dönüştürme verimliliği, üretilen enerji miktarını doğrudan etkiler. Modern panellerin verimliliği
+                genellikle %15-20 arasında değişir.</li>
+            <li><strong>Gölgeleme Analizi:</strong> Gölgeleme, enerji üretimini azaltabilecek önemli bir faktördür. Bu nedenle, çevredeki yapıların, ağaçların veya diğer
+                engellerin gölgeleme etkisi analiz edilir ve hesaplamalara dahil edilir.</li>
+            <li><strong>Enerji Üretim Hesaplaması:</strong> Tüm bu veriler kullanılarak, belirli bir dönemdeki (günlük, aylık, yıllık) enerji üretim potansiyeli hesaplanır.
+                Bu hesaplamalar, güneş enerjisi projelerinin fizibilite çalışmalarında ve ekonomik analizlerinde kullanılır.</li>
+        </ol>
+
+        <p>Sonuç olarak, DNI verisi güneş enerjisi panellerinin enerji üretim hesaplamalarında kritik bir rol oynar. Doğru ve güvenilir DNI verileri, güneş enerjisi
+            sistemlerinin performansını optimize etmek, yatırım kararlarını desteklemek ve sürdürülebilir enerji üretimini sağlamak için gereklidir. Güneş enerjisi
+            projelerinin başarıya ulaşması, büyük ölçüde bu verilerin doğru bir şekilde analiz edilmesine ve kullanılmasına bağlıdır.</p>
+
+    </div>
+
+    <div class="section" id="section3">
+        <h2>Zaman Serileri</h2>
+        <hr>
+        <h4>Hakkında</h4>
+        <p>Zaman serileri, belirli aralıklarla ölçülen ve kaydedilen verilerden oluşur. Örneğin, bir bölgedeki günlük güneş radyasyonu değeri (DNI)
+            bir zaman serisidir. Zaman serilerini anlamak için birkaç önemli kavram vardır. <strong>Trend</strong>, verilerin zaman içinde genel
+            olarak artma veya azalma eğilimidir. Örneğin, iklim değişikliği nedeniyle bir bölgedeki güneş radyasyonu miktarının yıllar içinde artması
+            bir trend göstergesidir. <strong>Seasonality</strong> (mevsimsellik), belirli dönemlerde tekrarlayan düzenli dalgalanmalardır. Örneğin,
+            yaz aylarında güneş radyasyonu değerlerinin kış aylarına göre daha yüksek olması mevsimsel bir etkidir. <strong>Durağanlık</strong>,
+            zaman serisinin ortalamasının ve dalgalanmalarının zaman içinde sabit kalması durumudur; bu, tahmin yapmak için önemlidir çünkü durağan
+            olmayan seriler genellikle dönüştürülerek durağan hale getirilir. <strong>White noise</strong> (beyaz gürültü), tamamen rastgele ve
+            öngörülemeyen veri noktalarıdır; bu tür verilerde belirli bir desen veya yapı yoktur. Zaman serisi analizinin amacı, bu bileşenleri ayırt
+            ederek verilerin gelecekte nasıl davranacağını tahmin etmektir.</p>
+    </div>
+
+    <div class="section" id="section4">
+        <h2>Tahminin Önemi</h2>
+        <hr>
+        <h4>Hakkında</h4>
+        <p>Direct Normal Irradiance (DNI), güneş enerjisi sistemlerinin verimliliğini ve performansını belirlemek için kritik öneme sahip bir ölçümdür.
+            DNI, doğrudan güneş ışığının yüzeye dik olarak düşen bileşenini ifade eder. Güneş enerjisi projeleri için doğru DNI tahminleri, hem kısa vadeli
+            operasyonel planlamada hem de uzun vadeli yatırım ve strateji geliştirmede hayati bir rol oynar.</p>
+
+        <p><strong>Kısa ve Uzun Vadeli DNI Tahminlerinin Önemi</strong></p>
+
+        <p>Kısa vadede, doğru DNI tahminleri, güneş enerjisi santrallerinin günlük operasyonlarını optimize etmek için gereklidir. Operatörler, bu tahminlere
+            dayanarak enerji üretim seviyelerini ve şebeke entegrasyonunu yönetebilirler. Bu, enerji arz ve talep dengesini sağlamak ve şebeke kararlılığını
+            korumak için kritiktir. Ayrıca, doğru kısa vadeli tahminler, bakım ve operasyon maliyetlerini düşürerek genel sistem verimliliğini artırabilir.</p>
+
+        <p>Uzun vadede ise, doğru DNI tahminleri, güneş enerjisi projelerinin ekonomik fizibilitesini ve sürdürülebilirliğini değerlendirirken büyük önem taşır.
+            İklim değişikliği bağlamında, uzun vadeli DNI tahminleri, bölgesel iklim modellerini ve güneş radyasyonu desenlerini anlamak için kullanılır. Bu, enerji
+            üretim kapasitesinin gelecekte nasıl değişebileceğini öngörmek için gereklidir. Yenilenebilir enerji kaynaklarına dayalı enerji politikalarının
+            geliştirilmesi ve enerji yatırım kararlarının alınması da doğru uzun vadeli DNI tahminlerine bağlıdır.</p>
+
+        <p><strong>DNI Tahmininin Tarihçesi</strong></p>
+
+        <p>DNI tahmininin kökleri, tarih öncesi dönemlere kadar uzanır. Eski Mısır uygarlığı, güneşin hareketlerini dikkatle izleyerek tarımsal faaliyetlerini
+            ve dini ritüellerini planlamıştır. Güneşin hareketlerinin gözlemi, Mısır tapınaklarının ve piramitlerinin inşasında önemli bir rol oynamıştır.
+            Bu ilk gözlemler, güneş ışığının düzenli döngülerini ve yoğunluğunu anlamak için temel oluşturmuştur.</p>
+
+        <p>Ortaçağ'da, İslam dünyasında astronomi bilimi büyük ilerlemeler kaydetmiştir. Bilim insanları, güneşin hareketlerini daha kesin bir şekilde gözlemlemek
+            için gelişmiş aletler ve teknikler geliştirmiştir. Bu gözlemler, güneş ışınımının ve dolayısıyla DNI'nin daha iyi anlaşılmasını sağlamıştır.</p>
+
+        <p>Modern dönemde, DNI tahmini, meteoroloji ve atmosfer biliminin ilerlemeleriyle birlikte daha bilimsel bir temele oturmuştur. 20. yüzyılın ortalarından
+            itibaren, uydu teknolojileri ve bilgisayar modelleri, güneş ışınımını ve atmosferik koşulları daha hassas bir şekilde ölçmeye ve tahmin etmeye
+            başlamıştır. Bu dönemde, akademik çalışmalar ve araştırmalar, DNI tahmini için matematiksel ve istatistiksel yöntemlerin geliştirilmesine odaklanmıştır.</p>
+
+        <p><strong>Akademik ve Bilimsel Gelişmeler</strong></p>
+
+        <p>DNI tahmini konusunda, akademik ve bilimsel çalışmalarda çeşitli yöntemler geliştirilmiştir. Bu yöntemler arasında fiziksel modeller, istatistiksel
+            modeller ve yapay zeka tabanlı modeller bulunmaktadır:</p>
+
+        <ul>
+            <li><strong>Fiziksel Modeller:</strong> Bu modeller, güneş ışınının atmosferdeki yolunu ve atmosferik bileşenlerle etkileşimini dikkate alır. Rayleigh
+                saçılması, aerosol etkileri ve su buharı absorpsiyonu gibi faktörler fiziksel modellerin temel bileşenleridir. Modeller, atmosferik optik derinlik
+                ve güneş zenit açısı gibi parametreleri kullanarak DNI tahminleri yapar.</li>
+            <li><strong>İstatistiksel Modeller:</strong> Geçmiş gözlem verilerine dayanarak gelecekteki DNI değerlerini tahmin etmek için kullanılır. Regresyon
+                analizleri ve zaman serisi analizleri, istatistiksel modellerde yaygın olarak kullanılan yöntemlerdir. Bu modeller, tarihsel veri kümelerini analiz
+                ederek mevsimsel desenleri ve uzun vadeli eğilimleri belirler.</li>
+            <li><strong>Yapay Zeka ve Makine Öğrenimi Modelleri:</strong> Son yıllarda, yapay zeka ve makine öğrenimi teknikleri, DNI tahminlerinde önemli ilerlemeler
+                sağlamıştır. Sinir ağları, destek vektör makineleri ve derin öğrenme algoritmaları, büyük veri kümelerini işleyerek daha hassas ve doğru tahminler
+                yapabilmektedir. Bu yöntemler, atmosferik koşulların karmaşık etkileşimlerini ve güneş radyasyonu desenlerini öğrenebilir.</li>
+        </ul>
+
+        <p>Özetle, DNI tahmini, güneş enerjisi sistemlerinin verimliliğini optimize etmek ve enerji üretim kapasitesini doğru bir şekilde değerlendirmek için hayati
+            bir öneme sahiptir. Tarih boyunca gözlemlerle başlayan bu süreç, günümüzde gelişmiş bilimsel ve teknolojik yöntemlerle desteklenmektedir. Hem kısa hem de
+            uzun vadeli DNI tahminleri, sürdürülebilir enerji politikalarının geliştirilmesi ve iklim değişikliği ile mücadelede önemli bir araçtır.</p>
+
+
+    </div>
+    <div class="section" id="section5">
+        <h2>İklim Değişikliği</h2>
+        <hr>
+        <p>İklim değişikliği, dünya genelinde hava durumu ve iklim desenlerinde önemli değişikliklere yol açmaktadır. Bu değişiklikler, sadece sıcaklık ve yağış
+            desenlerini değil, aynı zamanda güneş ışınımını, özellikle de Direct Normal Irradiance (DNI) değerlerini de etkilemektedir. DNI, güneş enerjisi
+            sistemlerinin verimliliği ve performansı için kritik bir ölçümdür ve iklim değişikliğinin bu değer üzerindeki etkileri, hem kısa hem de uzun vadede
+            enerji üretim stratejileri açısından büyük önem taşır.</p>
+        <div style="text-align: center;">
+        <iframe
+                width="600px"
+                height="300px"
+                src="https://www.youtube.com/embed/n9Ej5E47TNI"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+        ></iframe>
+        </div>
+
+        <p><strong>İklim Değişikliğinin DNI Üzerindeki Etkileri</strong></p>
+
+        <p>İklim değişikliği, atmosferdeki sera gazı konsantrasyonlarının artmasıyla birlikte dünya genelinde sıcaklıkların yükselmesine neden olmaktadır. Bu sıcaklık
+            artışı, bulutluluk oranlarını ve atmosferik partikül yoğunluklarını etkileyerek güneş ışınımının yeryüzüne ulaşma miktarını değiştirebilir. Özellikle, artan
+            sıcaklıklar ve değişen hava koşulları, bazı bölgelerde bulut örtüsünü azaltabilir, bu da daha yüksek DNI değerlerine yol açabilir. Bununla birlikte, artan
+            atmosferik partiküller ve hava kirliliği, güneş ışığının yeryüzüne ulaşmasını engelleyerek DNI değerlerini düşürebilir.</p>
+
+        <p>Günümüzde, iklim modelleri ve bilimsel araştırmalar, iklim değişikliğinin farklı bölgelerdeki DNI üzerindeki etkilerini anlamaya çalışmaktadır. Örneğin,
+            bazı bölgelerde iklim değişikliği nedeniyle daha uzun ve daha sıcak yaz mevsimleri yaşanırken, bu bölgelerdeki güneş enerjisi potansiyeli de artabilir.
+            Ancak, bu artış, aşırı sıcaklıkların güneş panellerinin verimliliğini azaltabileceği gerçeğiyle dengelenmelidir.</p>
+
+        <p><strong>Geçmişteki İklim Değişikliği ve DNI Olayları</strong></p>
+
+        <p>Tarih boyunca, iklim değişiklikleri çeşitli doğal felaketlere yol açmış ve bu olaylar insanların yaşamlarını etkilemiştir. Özellikle, geçmişte yaşanan
+            aşırı sıcaklık olayları ve kuraklıklar, doğrudan veya dolaylı olarak yüksek DNI değerleri ile ilişkilendirilebilir. Örneğin, 1930'lu yıllarda Amerika
+            Birleşik Devletleri'nde yaşanan Dust Bowl felaketi, aşırı kuraklık ve yüksek sıcaklıklar nedeniyle geniş tarım arazilerinin çölleşmesine neden olmuştur.
+            Bu dönemde, yüksek DNI değerleri, toprak kuruluğunu ve tarımsal verimsizliği artırarak birçok insanın yaşamını ve geçim kaynaklarını olumsuz etkilemiştir.</p>
+
+        <p>Benzer şekilde, Orta Doğu ve Kuzey Afrika'daki antik uygarlıklar, dönemsel iklim değişiklikleri ve kuraklıklar nedeniyle büyük zorluklar yaşamışlardır.
+            Bu bölgelerdeki yüksek DNI değerleri, su kaynaklarının hızla buharlaşmasına ve tarımsal üretimin düşmesine yol açarak, toplumların hayatta kalma mücadelesini
+            zorlaştırmıştır. Bu tür iklimsel zorluklar, bazı antik medeniyetlerin çöküşüne bile katkıda bulunmuştur.</p>
+
+        <p><strong>Gelecekteki Riskler ve Fırsatlar</strong></p>
+
+        <p>İklim değişikliği, gelecekte de DNI üzerinde çeşitli etkiler yaratacaktır. Artan sıcaklıklar ve değişen iklim koşulları, bazı bölgelerde güneş enerjisi
+            potansiyelini artırırken, diğer bölgelerde azaltabilir. Bu durum, yenilenebilir enerji stratejilerinin ve enerji altyapısının iklim değişikliği senaryolarına
+            göre uyarlanmasını gerektirir. Ayrıca, aşırı iklim olaylarının daha sık ve şiddetli hale gelmesi, güneş enerjisi sistemlerinin dayanıklılığını ve güvenilirliğini
+            test edecektir.</p>
+
+        <p>Özetle, iklim değişikliği, DNI değerleri üzerinde önemli etkiler yaratmaktadır ve bu etkiler, hem tarihsel hem de gelecekteki enerji üretim stratejileri açısından
+            dikkatle değerlendirilmelidir. Geçmişte yaşanan iklim değişikliği olayları, bu değişimlerin toplumlar üzerindeki potansiyel etkilerini anlamamıza yardımcı olurken,
+            geleceğe yönelik doğru ve sürdürülebilir enerji politikalarının geliştirilmesi için de önemli dersler sunmaktadır.</p>
+
+
+    </div>
+
+    <!-- İçerik bölümü -->
+    <!-- Diğer içerikler buraya gelecek -->
+</div>
+
+<script>
+    function toggleSidebar() {
+        var sidebar = document.getElementById("mySidebar");
+        var mainContent = document.getElementById("mainContent");
+
+        if (sidebar.style.left === '0px') {
+            // Sidebar'ı kapat
+            sidebar.style.left = '-250px';
+            mainContent.style.marginLeft = '150px'; // Sidebar kapalıyken sol marjin
+        } else {
+            // Sidebar'ı aç
+            sidebar.style.left = '0';
+            mainContent.style.marginLeft = '400px'; // Sidebar genişliği (250px) + ekstra boşluk (40px)
+        }
+    }
+
+    // Sidebar içindeki tüm linklere tıklama işlevi ekleyin
+    document.querySelectorAll('.sidebar a').forEach(function(link) {
+        link.addEventListener('click', function() {
+            var sidebar = document.getElementById("mySidebar");
+            sidebar.style.left = '-250px'; // Sidebar'ı gizle
+            var mainContent = document.getElementById("mainContent");
+            mainContent.style.marginLeft = '150px'; // Sidebar linkine tıklandığında içerik için sol marjin
+        });
+    });
+
+</script>
+
+</body>
+</html>
